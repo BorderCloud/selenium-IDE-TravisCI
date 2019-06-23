@@ -1,0 +1,84 @@
+{
+  "id": "5e07c626-c1ea-4205-a776-06ff97c39259",
+  "version": "2.0",
+  "name": "test",
+  "url": "https://www.google.com",
+  "tests": [{
+    "id": "480657ed-7753-4328-a29d-9210f79b5664",
+    "name": "testGoogle",
+    "commands": [{
+      "id": "d552ce33-34ef-43a1-bbc3-8beb774c3e5c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44f26cec-1df6-451f-9277-80d5a3caf08f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "993x665",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2c58a2ce-a025-4100-9ae0-65df39e1e3db",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": "test"
+    }]
+  }, {
+    "id": "816946db-5ca2-45de-8514-f1311c259ab6",
+    "name": "testTrue",
+    "commands": [{
+      "id": "ff3459ac-6a16-483c-825b-911101a9cdcb",
+      "comment": "",
+      "command": "store",
+      "target": "true",
+      "targets": [],
+      "value": "var1"
+    }, {
+      "id": "67eff035-7a7d-4e4a-91c8-8e969dd3089d",
+      "comment": "",
+      "command": "assert",
+      "target": "var1",
+      "targets": [],
+      "value": "true"
+    }]
+  }, {
+    "id": "8e53e103-f43a-4493-b27b-a4a4fb0648a1",
+    "name": "testFalse",
+    "commands": [{
+      "id": "85f03d2c-2e89-4c08-8b23-5298a366b117",
+      "comment": "",
+      "command": "store",
+      "target": "false",
+      "targets": [],
+      "value": "var1"
+    }, {
+      "id": "1f760104-f6f2-40bf-8ed9-f18e3ba9ae78",
+      "comment": "",
+      "command": "assert",
+      "target": "var1",
+      "targets": [],
+      "value": "true"
+    }]
+  }],
+  "suites": [{
+    "id": "dc8817c3-646d-4cb2-b88e-c1f87a092392",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["480657ed-7753-4328-a29d-9210f79b5664", "816946db-5ca2-45de-8514-f1311c259ab6", "8e53e103-f43a-4493-b27b-a4a4fb0648a1"]
+  }],
+  "urls": ["https://www.google.com/"],
+  "plugins": []
+}

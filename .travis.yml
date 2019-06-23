@@ -1,0 +1,11 @@
+language: php
+
+services:
+  - docker
+
+before_install:
+- docker-compose -f docker-compose.yaml up -d
+
+script:
+- selenium-side-runner  --server http://localhost:4444/wd/hub -c "browserName=chrome" ./test.side
+- selenium-side-runner  --server http://localhost:4444/wd/hub -c "browserName=firefox" ./test.side
